@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mamad.views import index, deleteaction
+from mamad.views import index, deleteaction, index1
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", index, name="index"),
     path("delete/", deleteaction, name="delete"),
+    path("all/", index1, name="all"),
 ]
